@@ -1,6 +1,22 @@
 create-react-appをベースに作成
 https://github.com/facebookincubator/create-react-app
 
+## 環境構成
+
+### システム環境情報
+
+```
+node v7.1.0
+react 15.6.1
+```
+
+
+
+
+## ホスティング
+開発環境
+https://n-license.firebaseapp.com/
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -16,6 +32,16 @@ You will also see any lint errors in the console.
 ### `npm run push`
 
 git add and push origin
+
+### `npm run deploy`
+
+firebaseにデプロイします。
+事前に下記コマンドが必要になります
+
+```
+npm i -g firebase-tools
+firebase login
+```
 
 ### `npm test`
 
