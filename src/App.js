@@ -1,21 +1,26 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
+import {login,logout} from './firebase'
+
+window.logout = ()=>{
+  logout()
+}
+
+// login()
+
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Credit score</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="App">
+                <h1>n-license</h1>
+                <button onClick={login}>Facebookログイン</button>
+                <button onClick={logout}>ログアウト</button>
+            </div>
+        );
+    }
 }
 
 export default App;
