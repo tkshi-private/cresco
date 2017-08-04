@@ -21,7 +21,7 @@ export default function(){
       	<div className="bgmerlari">
       		<div className="nice-btnBox">
       			<span className="nice_check"><i className="fa fa-check-circle" aria-hidden="true"></i></span>
-      			<p className="nice-text">N-LICENCE</p>
+      			<a href='/beginner_register1' className="nice-text">N-LICENCE</a>
       		</div>
       	</div>
       </div>
