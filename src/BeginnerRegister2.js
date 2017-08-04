@@ -34,7 +34,7 @@ export default function(){
       			<p className="since">Since July 2016</p>
       		</div>
 
-      		<div className="cardCover__flow-securityBlock">
+      		<div className="cardCover__flow-securityBlock" onClick={()=>{window.location.pathname = '/beginner_register3'}}>
       			<div className="icon_sec"><img src="img/common/icon_sec.png" alt=""/></div>
       			<p className="security_text">このユーザーとの取引は<br />保険で保障されています</p>
       		</div>

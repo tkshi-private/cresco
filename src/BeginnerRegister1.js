@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function(){
+export default function(props){
   return(
     <div>
       <head>
@@ -16,7 +16,7 @@ export default function(){
       	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
       </head>
       <body>
-      <div id="wrapper">
+      <div id="wrapper" onClick={()=>{window.location.pathname = '/beginner_register2'}}>
 
       	<div className="cardCover green-cover">
       		<div className="cardCover__flow01-leadBlock">
