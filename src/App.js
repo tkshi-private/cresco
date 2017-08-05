@@ -1,15 +1,11 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-
 import {login,logout,onLogin,onLogout} from './firebase'
 
 window.logout = ()=>{
   logout()
 }
-
-
 
 class App extends Component {
   constructor(props){
@@ -46,12 +42,10 @@ class App extends Component {
                 </head>
                 <body>
                 <div id="wrapper">
-
                 	<div className="cardCover view_outer">
                 		<div className="cardCover__view-leadBlock">
                 			<p className="lead-title">index</p>
                 		</div>
-
                 		<div className="cardCover__view-LinkBlock">
                 			<ul className="view_Link_list">
                 				<li><a href="/mercari">ビギビナーの画面へ</a></li>
@@ -59,11 +53,8 @@ class App extends Component {
                 				<li><a href="/register6">登録フローへ</a></li>
                 			</ul>
                 		</div>
-
                 	</div>
-
                 </div>
-
                 	<script src="js/jquery-2.1.4.min.js"></script>
                 	<script src="js/app.js"></script>
                 </body>

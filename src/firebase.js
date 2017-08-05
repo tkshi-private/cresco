@@ -1,4 +1,5 @@
 import * as firebase from "firebase";
+import users from './store/user'
 var config = {
     apiKey: "AIzaSyAqC7F7EsNb5cfdkXBOiZQRwbTxjTSZdL8",
     authDomain: "n-license.firebaseapp.com",
@@ -7,6 +8,7 @@ var config = {
 firebase.initializeApp(config);
 var provider = new firebase.auth.FacebookAuthProvider();
 var database = firebase.database();
+
 
 export const onLogin = (callback)=>{
   firebase.auth().onAuthStateChanged(function(user) {
@@ -35,14 +37,19 @@ export const logout = ()=>{
   firebase.auth().signOut()
 }
 
-export const login = ()=>{
-  firebase.auth().signInWithRedirect(provider).then(function(result) {
-      // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-      var token = result.credential.accessToken;
-      // The signed-in user info.
-      var user = result.user;
-      // ...
 
+
+export const login = ()=>{
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      users.setCurrentUser(user)
+    } else {
+    }
+  });
+  console.log('login')
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+      var token = result.credential.accessToken;
+      var user = result.user;
       firebase.database().ref('users/' + user.uid).set({
         ...user.providerData
       });
