@@ -1,6 +1,15 @@
 import React from 'react';
+import {login,getCurrentUser} from './firebase'
+import ToggleDisplay from 'react-toggle-display';
+import {observer} from "mobx-react";
+import {observable} from "mobx";
 
+@observer
 export default function(props) {
+  setInterval(()=>{
+    console.log(getCurrentUser().email)
+  })
+
     return (
         <div>
           <head>
@@ -25,10 +34,19 @@ export default function(props) {
 
           		<div className="cardCover__RegistBlock">
           			<div className="btnRegist">
-          				<a href="#">
-          					<span className="icon_check"><i className="fa fa-check-circle" aria-hidden="true"></i></span>
-          					<p className="Regist_text">Facebookで登録</p>
-          				</a>
+                  <ToggleDisplay show={!getCurrentUser()}>
+                    <a href="#" onClick={login}>
+            					<span className="icon_check"><i className="fa fa-check-circle" aria-hidden="true"></i></span>
+            					<p className="Regist_text">Facebookで登録</p>
+            				</a>
+                  </ToggleDisplay>
+                  <ToggleDisplay show={getCurrentUser()}>
+                    <a href="#">
+            					<span className="icon_check active"><i className="fa fa-check-circle" aria-hidden="true"></i></span>
+            					<p className="Regist_text active">Facebookで登録</p>
+            				</a>
+                  </ToggleDisplay>
+
           			</div>
 
           			<div className="btnRegist">

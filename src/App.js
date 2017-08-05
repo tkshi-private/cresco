@@ -56,7 +56,7 @@ class App extends Component {
                 			<ul className="view_Link_list">
                 				<li><a href="/mercari">ビギビナーの画面へ</a></li>
                 				<li><a href="#">ゴールドライセンスの画面へ</a></li>
-                				<li><a href="#">登録フローへ</a></li>
+                				<li><a href="/register6">登録フローへ</a></li>
                 			</ul>
                 		</div>
 
