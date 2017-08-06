@@ -1,4 +1,7 @@
 import React from 'react';
+import users from './store/user'
+
+console.log(users.users[0].email)
 
 export default function(props){
   return(

@@ -23,4 +23,8 @@ class Users{
 let users = new Users()
 users.users.push(new User())
 
+setInterval(()=>{
+  console.log(users.getMyUser().phoneNumber)
+},1000)
+
 export default users;

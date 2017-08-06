@@ -12,7 +12,6 @@ render(){
   let me = users.getMyUser()
   return (
       <div>
-        <head>
           <meta charset="utf-8" />
           <meta name="keywords" content=",,," />
           <meta name="description" content="" />
@@ -23,8 +22,6 @@ render(){
           <link href="css/style.css" rel="stylesheet" type="text/css" />
           <link href="css/sp.css" rel="stylesheet" type="text/css" />
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-        </head>
-        <body>
         <div id="wrapper">
 
           <div className="cardCover white-cover">
@@ -45,7 +42,7 @@ render(){
             </div>
 
             <div className="btnAction-next">
-              <a href="#">次へ</a>
+              <a href="/register11">次へ</a>
             </div>
 
           </div>
@@ -65,7 +62,6 @@ render(){
 
           <script src="js/jquery-2.1.4.min.js"></script>
           <script src="js/app.js"></script>
-        </body>
       </div>
   )
 }
