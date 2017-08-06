@@ -15,13 +15,12 @@ class Users{
     console.log('setCurrentUser',user.email)
     this.users[0].email = user.email
   }
+  @action setPhoneNumber = (number)=>{
+    this.users[0].phoneNumber = number
+  }
 }
 
 let users = new Users()
 users.users.push(new User())
-
-setInterval(()=>{
-  console.log(users.users[0])
-},1000)
 
 export default users;

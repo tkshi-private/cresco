@@ -3,7 +3,7 @@ import {login, getCurrentUser} from './firebase'
 import ToggleDisplay from 'react-toggle-display';
 import {observer} from "mobx-react";
 import {observable} from "mobx";
-import users from './store/user'
+import users from './store/user';
 
 @observer
 export default class App extends Component {
