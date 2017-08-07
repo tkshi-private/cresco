@@ -12,7 +12,7 @@ export default class App extends Component {
       register(users.getMyUser())
         return (
             <div>
-              	<title>sp</title>
+              	<title>N-LICENCE</title>
               	<link href="css/reset.css" rel="stylesheet" type="text/css" />
               	<link href="css/style.css" rel="stylesheet" type="text/css" />
               	<link href="css/sp.css" rel="stylesheet" type="text/css" />

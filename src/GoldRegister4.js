@@ -6,7 +6,7 @@ import {Link} from 'react-router'
 export default function(props) {
     return (
         <div>
-          	<title>sp</title>
+          	<title>N-LICENCE</title>
           	<link href="/css/reset.css" rel="stylesheet" type="text/css" />
           	<link href="/css/style.css" rel="stylesheet" type="text/css" />
           	<link href="/css/sp.css" rel="stylesheet" type="text/css" />

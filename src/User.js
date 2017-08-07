@@ -31,7 +31,7 @@ export default class App extends Component {
         console.log(this.state)
         return (
             <div>
-                <title>sp</title>
+                <title>N-LICENCE</title>
                 <link href="/css/reset.css" rel="stylesheet" type="text/css"/>
                 <link href="/css/style.css" rel="stylesheet" type="text/css"/>
                 <link href="/css/sp.css" rel="stylesheet" type="text/css"/>
@@ -52,7 +52,9 @@ export default class App extends Component {
                             <span className="profIcon"><img src="/img/common/prof_01.png" alt=""/></span>
                             <p className="profLank">Beginner<span>ビギナー</span>
                             </p>
-                            <p className="since">Since July 2016</p>
+                            <div className="btnAction">
+                        			<a target="_blank" href={`https://www.facebook.com/sharer/sharer.php?u=https://n-license.firebaseapp.com/user/${users.getViwerUser().uid}`}>ライセンスをシェア</a>
+                        		</div>
                         </div>
                     </div>
 

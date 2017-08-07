@@ -12,7 +12,7 @@ export default function(props){
       	<meta name="description" content="" />
       	<meta name="viewport" content="width=device-width" />
       	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      	<title>sp</title>
+      	<title>N-LICENCE</title>
       	<link href="css/reset.css" rel="stylesheet" type="text/css" />
       	<link href="css/style.css" rel="stylesheet" type="text/css" />
       	<link href="css/sp.css" rel="stylesheet" type="text/css" />
