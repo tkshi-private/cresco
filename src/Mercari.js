@@ -1,5 +1,6 @@
 import React from 'react';
 import users from './store/user'
+import {Link} from 'react-router'
 
 
 export default function(){
@@ -15,7 +16,7 @@ export default function(){
       	<div className="bgmerlari">
       		<div className="nice-btnBox">
       			<span className="nice_check"><i className="fa fa-check-circle" aria-hidden="true"></i></span>
-      			<a href='/beginner_register1' className="nice-text">N-LICENCE</a>
+      			<Link to='/gold_register3' className="nice-text">N-LICENCE</Link>
       		</div>
       	</div>
       </div>

@@ -2,7 +2,6 @@ import React from 'react';
 import users from './store/user'
 import {Link} from 'react-router'
 
-
 export default function(props) {
     return (
         <div>
@@ -30,10 +29,12 @@ export default function(props) {
                         <p className="since">Since July 2016</p>
                     </div>
 
-                    <div className="cardCover__flow-licenseBlock">
-                        <div className="icon_check"><img src="img/common/icon_chek.png" alt=""/></div>
-                        <p className="license_text">実績を見て見ましょう！</p>
-                    </div>
+                    <Link to={'/gold_register4'}>
+                        <div className="cardCover__flow-licenseBlock">
+                            <div className="icon_check"><img src="img/common/icon_chek.png" alt=""/></div>
+                            <p className="license_text">実績を見て見ましょう！</p>
+                        </div>
+                    </Link>
                 </div>
 
                 <div className="pager">

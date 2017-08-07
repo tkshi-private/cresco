@@ -7,6 +7,7 @@ import BeginnerRegister1 from './BeginnerRegister1';
 import BeginnerRegister2 from './BeginnerRegister2';
 import BeginnerRegister3 from './BeginnerRegister3';
 import GoldRegister3 from './GoldRegister3';
+import GoldRegister4 from './GoldRegister4';
 import Register6 from './Register6';
 import Register9 from './Register9';
 import Register11 from './Register11';
@@ -23,6 +24,7 @@ ReactDOM.render(    <Router history={browserHistory}>
         <Route path="/beginner_register2" component={BeginnerRegister2} />
         <Route path="/beginner_register3" component={BeginnerRegister3} />
         <Route path="/gold_register3" component={GoldRegister3} />
+        <Route path="/gold_register4" component={GoldRegister4} />
         <Route path="/register6" component={Register6} />
         <Route path="/register12" component={Register12} />
         <Route path="/register11" component={Register11} />

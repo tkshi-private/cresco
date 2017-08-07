@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {login,logout,onLogin,onLogout} from './firebase'
+import {Link} from 'react-router'
 
 window.logout = ()=>{
   logout()
@@ -27,20 +28,11 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <html lang="ja">
-                <head>
-                	<meta charset="utf-8" />
-                	<meta name="keywords" content=",,," />
-                	<meta name="description" content="" />
-                	<meta name="viewport" content="width=device-width" />
-                	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
                 	<title>n-license</title>
                 	<link href="css/reset.css" rel="stylesheet" type="text/css" />
                 	<link href="css/style.css" rel="stylesheet" type="text/css" />
                 	<link href="css/sp.css" rel="stylesheet" type="text/css" />
                 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-                </head>
-                <body>
                 <div id="wrapper">
                 	<div className="cardCover view_outer">
                 		<div className="cardCover__view-leadBlock">
@@ -48,17 +40,15 @@ class App extends Component {
                 		</div>
                 		<div className="cardCover__view-LinkBlock">
                 			<ul className="view_Link_list">
-                				<li><a href="/mercari">ビギビナーの画面へ</a></li>
-                				<li><a href="#">ゴールドライセンスの画面へ</a></li>
-                				<li><a href="/register6">登録フローへ</a></li>
+                				<li><Link to="/mercari">ビギビナーの画面へ</Link></li>
+                				<li><Link to="/mercari">ゴールドライセンスの画面へ</Link></li>
+                				<li><Link to="/register6">登録フローへ</Link></li>
                 			</ul>
                 		</div>
                 	</div>
                 </div>
                 	<script src="js/jquery-2.1.4.min.js"></script>
                 	<script src="js/app.js"></script>
-                </body>
-                </html>
 
             </div>
         );
