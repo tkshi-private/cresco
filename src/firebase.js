@@ -52,7 +52,6 @@ export const getUser = (uid,cb)=>{
 
 export const login = ()=>{
   firebase.auth().onAuthStateChanged(function(user) {
-    console.log('facebook user',user)
     if (user) {
       users.getMyUser().uid = user.uid
       users.getMyUser().email = user.email

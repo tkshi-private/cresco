@@ -17,11 +17,9 @@ class App extends Component {
   }
   componentDidMount(){
     onLogin((user)=>{
-      console.log('logined',user)
       this.setState({user:user})
     })
     onLogout(()=>{
-      console.log('logouted')
       this.setState({user:{}})
     })
   }

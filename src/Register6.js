@@ -9,7 +9,6 @@ import {Link} from 'react-router'
 @observer
 export default class App extends Component {
     render() {
-      console.log("users.getMyUser()",users.getMyUser())
         return (
             <div>
                     <meta charset="utf-8"/>

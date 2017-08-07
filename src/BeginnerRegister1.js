@@ -1,7 +1,6 @@
 import React from 'react';
 import users from './store/user'
 
-console.log(users.users[0].email)
 
 export default function(props){
   return(
@@ -23,7 +22,6 @@ export default function(props){
 
       	<div className="cardCover green-cover">
       		<div className="cardCover__flow01-leadBlock">
-      			<h1 className="logo"><img src="img/common/Group.png" alt="group"/></h1>
       			<p className="lead-title">N.LICENSE</p>
       			<p className="sub-title">Social Network Credi</p>
       		</div>

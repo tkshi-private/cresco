@@ -15,7 +15,6 @@ class Users{
     return this.users[0];
   }
   @action setViwerUser = (user)=>{
-    console.log('setViwerUser',user)
     this.users[1] = user
   }
   @action getViwerUser = ()=>{
@@ -32,7 +31,6 @@ class Users{
     }
   }
   @action setCurrentUser = (user)=>{
-    console.log('setCurrentUser',user.email)
     this.users[0].email = user.email
   }
   @action setPhoneNumber = (number)=>{
@@ -44,7 +42,6 @@ let users = new Users()
 users.users.push(new User())
 
 setInterval(()=>{
-  // console.log(users.getViwerUser())
 },1000)
 
 export default users;

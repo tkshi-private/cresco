@@ -28,7 +28,6 @@ export default class App extends Component {
           photoURL:'',
           displayName:''
         }
-        console.log(this.state)
         return (
             <div>
                 <title>N-LICENCE</title>
@@ -66,10 +65,10 @@ export default class App extends Component {
                     </div>
 
                     <div className="btnaction_LankUp">
-                        <a href="">
+                        <Link to="/register17">
                             <span><img src="/img/common/icon_crown.png" alt=""/></span>
                             <p>SNSアカウントを連携して<br/>ランクアップしよう！</p>
-                        </a>
+                        </Link>
                     </div>
 
                 </div>
