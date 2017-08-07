@@ -28,9 +28,8 @@ export default class App extends Component {
               			<p>登録が完了しました！</p>
               		</div>
 
-
               		<div className="btnAction">
-              			<a href="#">さっそくライセンスを見る</a>
+              			<Link to={`/user/${users.getMyUser().uid}`}>さっそくライセンスを見る</Link>
               		</div>
 
               	</div>
