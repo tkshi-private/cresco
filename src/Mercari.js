@@ -1,7 +1,6 @@
 import React from 'react';
 import users from './store/user'
 
-users.users[0].email = 'mercari@gmail.com'
 
 export default function(){
   return(

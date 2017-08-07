@@ -10,6 +10,7 @@ import Register6 from './Register6';
 import Register9 from './Register9';
 import Register11 from './Register11';
 import Register12 from './Register12';
+import Register14 from './Register14';
 import { Router, Route, browserHistory } from 'react-router';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -22,6 +23,7 @@ ReactDOM.render(    <Router history={browserHistory}>
         <Route path="/register6" component={Register6} />
         <Route path="/register12" component={Register12} />
         <Route path="/register11" component={Register11} />
+        <Route path="/register14" component={Register14} />
         <Route path="/register9" component={Register9} />
     </Router>, document.getElementById('root'));
 registerServiceWorker();

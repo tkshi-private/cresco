@@ -30,7 +30,7 @@ export default class App extends Component {
 
                             <div className="cardCover__RegistBlock">
                                 <div className="btnRegist">
-                                    <ToggleDisplay show={!getCurrentUser()}>
+                                    <ToggleDisplay show={!users.getMyUser().email}>
                                         <a href="#" onClick={login}>
                                             <span className="icon_check">
                                                 <i className="fa fa-check-circle" aria-hidden="true"></i>
@@ -38,7 +38,7 @@ export default class App extends Component {
                                             <p className="Regist_text">Facebookで登録</p>
                                         </a>
                                     </ToggleDisplay>
-                                    <ToggleDisplay show={getCurrentUser()}>
+                                    <ToggleDisplay show={users.getMyUser().email}>
                                         <a href="#">
                                             <span className="icon_check active">
                                                 <i className="fa fa-check-circle" aria-hidden="true"></i>
@@ -77,7 +77,6 @@ export default class App extends Component {
                         </div>
                     </div>
                     <script src="js/jquery-2.1.4.min.js"></script>
-                    <script src="js/app.js"></script>
             </div>
         )
     }

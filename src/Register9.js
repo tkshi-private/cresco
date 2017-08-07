@@ -2,6 +2,7 @@ import {observer} from "mobx-react";
 import React, {Component} from 'react';
 import users from './store/user'
 import {serialize, deserialize} from "serializr";
+import {Link} from 'react-router'
 
 @observer
 export default class App extends Component {
@@ -42,7 +43,7 @@ render(){
             </div>
 
             <div className="btnAction-next">
-              <a href="/register11">次へ</a>
+              <Link to="/register11">次へ</Link>
             </div>
 
           </div>

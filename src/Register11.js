@@ -1,21 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router'
 
 export default function(props) {
     return (
         <div>
-          <head>
-          	<meta charset="utf-8"/>
-          	<meta name="keywords" content=",,,"/>
-          	<meta name="description" content=""/>
-          	<meta name="viewport" content="width=device-width"/>
-          	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
           	<title>sp</title>
           	<link href="css/reset.css" rel="stylesheet" type="text/css" />
           	<link href="css/style.css" rel="stylesheet" type="text/css" />
           	<link href="css/sp.css" rel="stylesheet" type="text/css" />
           	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-          </head>
-          <body>
           <div id="wrapper">
 
           	<div className="cardCover white-cover">
@@ -30,7 +23,7 @@ export default function(props) {
 
           		<div className="btnAction-Click active">
           			<ul className="filmLink">
-          				<li><a href="">あとで</a></li>
+          				<li><Link to="/register12">あとで</Link></li>
           				<li><a href="">撮影</a></li>
           			</ul>
           		</div>
@@ -52,7 +45,6 @@ export default function(props) {
 
           	<script src="js/jquery-2.1.4.min.js"></script>
           	<script src="js/app.js"></script>
-          </body>
         </div>
     )
 }
