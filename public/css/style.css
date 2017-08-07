@@ -1225,3 +1225,8 @@ input[type="text"]::-ms-input-placeholder {
 	border-right: 2px solid #19BC9C;
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
+}
+#wrapper > div.cardCover.white-logo > div.cardCover__flow-imgBlock15 > p:nth-child(1) > img
+{
+	    border-radius: 50%;
+}

@@ -44,6 +44,12 @@ export const register = (user)=>{
   });
 }
 
+export const getUser = (uid,cb)=>{
+  firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
+    cb(snapshot.val())
+  });
+}
+
 export const login = ()=>{
   firebase.auth().onAuthStateChanged(function(user) {
     console.log('facebook user',user)

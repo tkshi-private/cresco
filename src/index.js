@@ -26,6 +26,6 @@ ReactDOM.render(    <Router history={browserHistory}>
         <Route path="/register11" component={Register11} />
         <Route path="/register14" component={Register14} />
         <Route path="/register9" component={Register9} />
-        <Route path="/user/1" component={User} />
+        <Route path="/user/:uid" component={User} />
     </Router>, document.getElementById('root'));
 registerServiceWorker();
