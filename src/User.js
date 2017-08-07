@@ -10,16 +10,16 @@ import {Link} from 'react-router'
 export default class App extends Component {
     constructor(props) {
         super(props)
-        this.state = {}
+        this.state = {
+          success:true
+        }
     }
     componentDidMount() {
         const {uid} = this.props.params
         getUser(uid, (user) => {
             users.setViwerUser(user)
             this.setState({
-                user: {
-                    ...user
-                }
+              success:true
             })
         })
     }
@@ -35,6 +35,7 @@ export default class App extends Component {
                 <link href="/css/style.css" rel="stylesheet" type="text/css"/>
                 <link href="/css/sp.css" rel="stylesheet" type="text/css"/>
                 <div id="wrapper">
+                  <Link to="/register16">
 
                     <div className="cardCover white-logo">
                         <div className="cardCover__flow15-leadBlock">
@@ -56,6 +57,7 @@ export default class App extends Component {
                         		</div>
                         </div>
                     </div>
+                  </Link>
 
                     <div className="pager">
                         <span className="carrent"></span>

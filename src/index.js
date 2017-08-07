@@ -13,6 +13,7 @@ import Register9 from './Register9';
 import Register11 from './Register11';
 import Register12 from './Register12';
 import Register14 from './Register14';
+import Register16 from './Register16';
 import Register17 from './Register17';
 import User from './User';
 import { Router, Route, browserHistory } from 'react-router';
@@ -31,6 +32,7 @@ ReactDOM.render(    <Router history={browserHistory}>
         <Route path="/register11" component={Register11} />
         <Route path="/register14" component={Register14} />
         <Route path="/register17" component={Register17} />
+        <Route path="/register16" component={Register16} />
         <Route path="/register9" component={Register9} />
         <Route path="/user/:uid" component={User} />
     </Router>, document.getElementById('root'));
