@@ -46,9 +46,13 @@ export const register = (user)=>{
 
 export const login = ()=>{
   firebase.auth().onAuthStateChanged(function(user) {
+    console.log('facebook user',user)
     if (user) {
       users.getMyUser().uid = user.uid
       users.getMyUser().email = user.email
+      users.getMyUser().displayName = user.displayName
+      users.getMyUser().photoURL = user.photoURL
+
     } else {
 
     }
