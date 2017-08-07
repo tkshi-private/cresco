@@ -38,20 +38,24 @@ export const logout = ()=>{
 }
 
 
+export const register = (user)=>{
+  firebase.database().ref('users/' + user.uid).set({
+    ...user
+  });
+}
 
 export const login = ()=>{
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      users.setCurrentUser(user)
+      users.getMyUser().uid = user.uid
+      users.getMyUser().email = user.email
     } else {
+
     }
   });
-  console.log('login')
   firebase.auth().signInWithPopup(provider).then(function(result) {
       var token = result.credential.accessToken;
       var user = result.user;
-      firebase.database().ref('users/' + user.uid).set({
-        ...user.providerData
-      });
+
     })
 }

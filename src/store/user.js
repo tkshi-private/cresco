@@ -4,6 +4,7 @@ import {observable,action} from "mobx";
 class User{
   @observable email = ''
   @observable phoneNumber = ''
+  @observable uid = ''
 }
 
 class Users{
@@ -24,7 +25,7 @@ let users = new Users()
 users.users.push(new User())
 
 setInterval(()=>{
-  console.log(users.getMyUser().phoneNumber)
+  console.log(users.getMyUser())
 },1000)
 
 export default users;

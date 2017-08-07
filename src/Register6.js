@@ -4,6 +4,7 @@ import ToggleDisplay from 'react-toggle-display';
 import {observer} from "mobx-react";
 import {observable} from "mobx";
 import users from './store/user';
+import {Link} from 'react-router'
 
 @observer
 export default class App extends Component {
@@ -60,7 +61,7 @@ export default class App extends Component {
                             </div>
 
                             <div className="btnAction-next">
-                                <a href="/register9">次へ</a>
+                                <Link to="/register9">次へ</Link>
                             </div>
 
                         </div>
@@ -76,7 +77,6 @@ export default class App extends Component {
                             <p>ライセンス発行まであと3ステップ！</p>
                         </div>
                     </div>
-                    <script src="js/jquery-2.1.4.min.js"></script>
             </div>
         )
     }

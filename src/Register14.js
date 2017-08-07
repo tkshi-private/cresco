@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {login, getCurrentUser} from './firebase'
+import {login, getCurrentUser,register} from './firebase'
 import ToggleDisplay from 'react-toggle-display';
 import {observer} from "mobx-react";
 import {observable} from "mobx";
@@ -9,7 +9,7 @@ import {Link} from 'react-router'
 @observer
 export default class App extends Component {
     render() {
-      console.log("users.getMyUser()",users.getMyUser())
+      register(users.getMyUser())
         return (
             <div>
               	<title>sp</title>
