@@ -38,7 +38,7 @@ class App extends Component {
                 		</div>
                 		<div className="cardCover__view-LinkBlock">
                 			<ul className="view_Link_list">
-                				<li><Link to="/mercari">ビギビナーの画面へ</Link></li>
+                				<li><Link to="/beginner_register2">ビギビナーの画面へ</Link></li>
                 				<li><Link to="/mercari">ゴールドライセンスの画面へ</Link></li>
                 				<li><Link to="/register6">登録フローへ</Link></li>
                 			</ul>

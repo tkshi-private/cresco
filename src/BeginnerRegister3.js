@@ -22,7 +22,8 @@ export default function(){
       		<div className="cardCover__flowbeginer-leadBlock">
       			<p className="lead-title">取引保障されています</p>
       			<p className="sub-title">ソーシャルエコノミー保険</p>
-      			<p className="company-name"><span>by</span><img src="img/common/sony_insurance.png" alt=""/></p>
+      			{/* <p className="company-name"><span>by</span><img src="img/common/sony_insurance.png" alt=""/></p> */}
+      			<p className="company-name"><span>by</span><img src="img/common/tokyo_kaijo.png" alt=""/></p>
       		</div>
 
 

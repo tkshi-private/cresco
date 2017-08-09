@@ -35,12 +35,14 @@ export default class App extends Component {
                 <link href="/css/style.css" rel="stylesheet" type="text/css"/>
                 <link href="/css/sp.css" rel="stylesheet" type="text/css"/>
                 <div id="wrapper">
-                  <Link to="/register16">
 
                     <div className="cardCover white-logo">
+                      <Link to="/register16">
+
                         <div className="cardCover__flow15-leadBlock">
                             <p className="lead-img"><img src="/img/common/sub_logo.png" alt=""/></p>
                         </div>
+                      </Link>
 
                         <div className="cardCover__flow-imgBlock15">
                             <p><img src={users.getViwerUser().photoURL} alt=""/></p>
@@ -57,7 +59,6 @@ export default class App extends Component {
                         		</div>
                         </div>
                     </div>
-                  </Link>
 
                     <div className="pager">
                         <span className="carrent"></span>
