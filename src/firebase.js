@@ -48,7 +48,6 @@ export const identificationImgURLregister = (value)=>{
   firebase.database().ref('identificationImgURL/').set({
     value: value
   });
-  console.log(value);
 }
 
 export const getUser = (uid,cb)=>{
@@ -56,6 +55,13 @@ export const getUser = (uid,cb)=>{
     cb(snapshot.val())
   });
 }
+
+export const getidentificationImgURL = (cb)=>{
+  firebase.database().ref('/identificationImgURL/').on('value',function(snapshot) {
+    cb(snapshot.val())
+  });
+}
+
 
 export const login = ()=>{
   firebase.auth().onAuthStateChanged(function(user) {

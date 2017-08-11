@@ -4,14 +4,25 @@ import users from './store/user'
 import {serialize, deserialize} from "serializr";
 import {Link} from 'react-router'
 import {identificationImgURLregister} from './firebase';
-
+import {getidentificationImgURL} from './firebase';
 
 @observer
 export default class App extends Component {
 handleChangePhoneNumber(identificationImgURL){
   identificationImgURLregister(identificationImgURL)
-  users.getMyUser().identificationImgURL = identificationImgURL
+  //users.getMyUser().identificationImgURL = identificationImgURL
 }
+
+componentDidMount(identificationImgURL){
+  getidentificationImgURL((name)=>{
+    identificationImgURL =  name.value
+    users.getMyUser().identificationImgURL = identificationImgURL
+    //alert(name.value)
+    // console.log(name.value)
+  })
+}
+
+
 render(){
   let me = users.getMyUser()
   return (
@@ -39,7 +50,7 @@ render(){
           <div className="cardCover__RegistBlock">
             <div className="telRegist">
               <form action="#" method="post">
-                <input value={me.identificationImgURL} type="tel" name="tel" placeholder="例）090-0123-4567" onChange={(e)=>{this.handleChangePhoneNumber(e.target.value)}} />
+                <input type="tel" name="tel" placeholder="例）090-0123-4567" onChange={(e)=>{this.handleChangePhoneNumber(e.target.value)}} />
               </form>
             </div>
           </div>
