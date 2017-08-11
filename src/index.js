@@ -18,6 +18,7 @@ import Register17 from './Register17';
 import flow2 from './flow2';
 import flow3 from './flow3';
 import flow4 from './flow4';
+import study from './study';
 import User from './User';
 import { Router, Route, browserHistory } from 'react-router';
 import registerServiceWorker from './registerServiceWorker';
@@ -30,6 +31,7 @@ ReactDOM.render(    <Router history={browserHistory}>
         <Route path="/flow2" component={flow2} />
         <Route path="/flow3" component={flow3} />
         <Route path="/flow4" component={flow4} />
+        <Route path="/study" component={study} />
         <Route path="/beginner_register3" component={BeginnerRegister3} />
         <Route path="/gold_register3" component={GoldRegister3} />
         <Route path="/gold_register4" component={GoldRegister4} />

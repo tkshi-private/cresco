@@ -44,6 +44,13 @@ export const register = (user)=>{
   });
 }
 
+export const identificationImgURLregister = (value)=>{
+  firebase.database().ref('identificationImgURL/').set({
+    value: value
+  });
+  console.log(value);
+}
+
 export const getUser = (uid,cb)=>{
   firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
     cb(snapshot.val())

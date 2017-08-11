@@ -7,6 +7,7 @@ class User{
   @observable photoURL = ''
   @observable displayName = ''
   @observable uid = ''
+  @observable identificationImgURL = ''
 }
 
 class Users{
