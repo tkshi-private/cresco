@@ -1,22 +1,16 @@
 import React from 'react';
+import users from './store/user'
+import {Link} from 'react-router'
 
 export default function(){
   return(
     <div>
-      <head>
-      	<meta charset="utf-8" />
-      	<meta name="keywords" content=",,," />
-      	<meta name="description" content="" />
-      	<meta name="viewport" content="width=device-width" />
-      	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      	<title>N-LICENCE</title>
-      	<link href="/css/reset.css" rel="stylesheet" type="text/css" />
-      	<link href="/css/style.css" rel="stylesheet" type="text/css" />
-      	<link href="/css/sp.css" rel="stylesheet" type="text/css" />
-      </head>
-      <body>
+      <title>N-LICENCE</title>
+      <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+      <link href="css/style.css" rel="stylesheet" type="text/css"/>
+      <link href="css/sp.css" rel="stylesheet" type="text/css"/>
       <div id="wrapper">
-
+      <Link to={'/flow4'}>
       	<div className="cardCover white-cover">
       		<div className="cardCover__flow02-leadBlock">
             <p className="sub-title">N.N.LICENSEの特徴②</p>
@@ -31,7 +25,7 @@ export default function(){
             <p>”N.LICENSE”は<br/>SNSアカウントの連携や<br/>電話番号の認証によって<br/>あなたのオンライン取引の信用度を<br/>見える化します。</p>
       		</div>
       	</div>
-
+      </Link>
 
       	<div className="pager">
       		<span className="carrent"></span>
@@ -41,17 +35,12 @@ export default function(){
       	</div>
 
       	<div className="btnaction_LankUp">
-      		<a href="">
+      		<Link to={'/register6'}>
       			<span><img src="img/common/icon_beg.png" alt=""/></span>
       			<p className="lead-text"><span className="sub-lead">あなたも今すぐ</span>無料でライセンスを取得!</p>
-      		</a>
+      		</Link>
       	</div>
-
       </div>
-
-      	<script src="js/jquery-2.1.4.min.js"></script>
-      	<script src="js/app.js"></script>
-      </body>
-</div>
+    </div>
   )
 }

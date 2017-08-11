@@ -3,18 +3,10 @@ import React from 'react';
 export default function(){
   return(
     <div>
-      <head>
-      	<meta charset="utf-8" />
-      	<meta name="keywords" content=",,," />
-      	<meta name="description" content="" />
-      	<meta name="viewport" content="width=device-width" />
-      	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      	<title>N-LICENCE</title>
-      	<link href="/css/reset.css" rel="stylesheet" type="text/css" />
-      	<link href="/css/style.css" rel="stylesheet" type="text/css" />
-      	<link href="/css/sp.css" rel="stylesheet" type="text/css" />
-      </head>
-      <body>
+      <title>N-LICENCE</title>
+      <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+      <link href="css/style.css" rel="stylesheet" type="text/css"/>
+      <link href="css/sp.css" rel="stylesheet" type="text/css"/>
       <div id="wrapper">
 
       	<div className="cardCover white-cover">
@@ -24,7 +16,7 @@ export default function(){
       		</div>
 
       		<div className="cardCover__flow-imgBlock04">
-      			<p><img src="img/common/img_02.png" alt=""/></p>
+      			<p><img src="img/common/icon_03.png" alt=""/></p>
       		</div>
 
           <div className="cardCover__flow04-textBlock">
@@ -52,10 +44,6 @@ export default function(){
       	</div>
 
       </div>
-
-      	<script src="js/jquery-2.1.4.min.js"></script>
-      	<script src="js/app.js"></script>
-      </body>
-</div>
+    </div>
   )
 }
