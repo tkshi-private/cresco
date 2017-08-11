@@ -15,6 +15,9 @@ import Register12 from './Register12';
 import Register14 from './Register14';
 import Register16 from './Register16';
 import Register17 from './Register17';
+import flow2 from './flow2';
+import flow3 from './flow3';
+import flow4 from './flow4';
 import User from './User';
 import { Router, Route, browserHistory } from 'react-router';
 import registerServiceWorker from './registerServiceWorker';
@@ -24,6 +27,9 @@ ReactDOM.render(    <Router history={browserHistory}>
         <Route path="/mercari" component={Mercari} />
         <Route path="/beginner_register1" component={BeginnerRegister1} />
         <Route path="/beginner_register2" component={BeginnerRegister2} />
+        <Route path="/flow2" component={flow2} />
+        <Route path="/flow3" component={flow3} />
+        <Route path="/flow4" component={flow4} />
         <Route path="/beginner_register3" component={BeginnerRegister3} />
         <Route path="/gold_register3" component={GoldRegister3} />
         <Route path="/gold_register4" component={GoldRegister4} />
