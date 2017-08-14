@@ -33,6 +33,7 @@ export const getCurrentUser = ()=>{
   }
 }
 
+
 export const logout = ()=>{
   firebase.auth().signOut()
 }
@@ -49,6 +50,16 @@ export const identificationImgURLregister = (value)=>{
     value: value
   });
 }
+
+export const upload = (value)=>{
+  var file = ("#fileUpload")
+  var ref = firebase.storage().ref('img');
+  ref.put(file).then(function(snapshot) {
+  console.log('Uploaded a blob or file!');
+  });
+}
+
+
 
 export const getUser = (uid,cb)=>{
   firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
