@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router'
-import {upload} from './firebase';
+import {upload} from 'firebase';
 
 
 export default function(props) {
@@ -20,11 +20,12 @@ export default function(props) {
 
           		<div className="tel_lead">
           			<p>身分証を登録しよう！</p>
-          		</div>
 
-              <li onClick={upload}>
-                   <input type="file" id="fileUpload" />
-              </li>
+                <div onClick={upload}>
+                  <progress value="0" max="100" id="up">0%</progress>
+                  <input type="file" id="fileButton" />
+                </div>
+          		</div>
 
           		<div className="btnAction-Click active">
           			<ul className="filmLink">

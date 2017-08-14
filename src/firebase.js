@@ -52,11 +52,29 @@ export const identificationImgURLregister = (value)=>{
 }
 
 export const upload = (value)=>{
-  var file = ("#fileUpload")
-  var ref = firebase.storage().ref('img');
-  ref.put(file).then(function(snapshot) {
-  console.log('Uploaded a blob or file!');
+  var up = document.getElementById('up');
+  var fileButton = document.getElementById('fileButton');
+  fileButton.addEventListener('change', function(e){
+    var file = e.target.files[0];
+    var ref = firebase.storage().ref('test' + file.name);
+
+    var task = ref.put(file);
+
+    task.on('state_changed',
+      function progress(snapshot){
+        var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        up.value = percentage;
+      },
+      function error(err){
+
+      },
+      function complete(){
+
+      }
+
+    );
   });
+
 }
 
 
