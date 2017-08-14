@@ -51,7 +51,7 @@ export const identificationImgURLregister = (value)=>{
   });
 }
 
-export const upload = (value)=>{
+export const upload = ()=>{
   var up = document.getElementById('up');
   var fileButton = document.getElementById('fileButton');
 
@@ -60,10 +60,9 @@ export const upload = (value)=>{
     var ref = firebase.storage().ref('images' + file.name);
 
     var task = ref.put(file);
-      task.on('state_changed',
-        function progress(snapshot){
+      task.on('state_changed', function progress(snapshot){
           var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          up.value = percentage;
+           up.value = percentage;
            console.log('Uploaded a blob or file!');
         },
         function error(err){

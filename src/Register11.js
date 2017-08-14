@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router'
 import users from './store/user'
 import {upload} from './firebase';
+
 export default function(props) {
     return (
         <div>
@@ -23,7 +24,6 @@ export default function(props) {
                 <div>
                   <progress value="0" max="100" id="up">0%</progress>
                   <input type="file" id="fileButton" onClick={upload} />
-              
                 </div>
           		</div>
 
