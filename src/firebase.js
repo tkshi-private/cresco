@@ -51,32 +51,29 @@ export const identificationImgURLregister = (value)=>{
   });
 }
 
-export const upload = ()=>{
-  console.log('Uploaded a blob or file!');
+export const upload = (value)=>{
   var up = document.getElementById('up');
   var fileButton = document.getElementById('fileButton');
 
   fileButton.addEventListener('change', function(e){
     var file = e.target.files[0];
-    var ref = firebase.storage().ref('t' + file.name);
+    var ref = firebase.storage().ref('images' + file.name);
 
-    ref.put(file).then(function(snapshot) {
-      console.log('Uploaded a blob or file!');
-    });
-    // var task = ref.put(file);
-    //   task.on('state_changed',
-    //     function progress(snapshot){
-    //       var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-    //       up.value = percentage;
-    //     },
-    //     function error(err){
-    //
-    //     },
-    //     function complete(){
-    //
-    //     }
-    //
-    // );
+    var task = ref.put(file);
+      task.on('state_changed',
+        function progress(snapshot){
+          var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          up.value = percentage;
+           console.log('Uploaded a blob or file!');
+        },
+        function error(err){
+
+        },
+        function complete(){
+
+        }
+
+    );
   });
 
 }

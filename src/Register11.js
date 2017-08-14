@@ -22,8 +22,8 @@ export default function(props) {
 
                 <div>
                   <progress value="0" max="100" id="up">0%</progress>
-                  <input type="file"/>
-                  <button id="fileButton" onClick={upload}>アップロード</button>
+                  <input type="file" id="fileButton" onClick={upload} />
+              
                 </div>
           		</div>
 
