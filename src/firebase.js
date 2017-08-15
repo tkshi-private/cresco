@@ -51,7 +51,7 @@ export const identificationImgURLregister = (value)=>{
   });
 }
 
-export const upload = ()=>{
+export const upload = (cb)=>{
   var up = document.getElementById('up');
   var fileButton = document.getElementById('fileButton');
 
