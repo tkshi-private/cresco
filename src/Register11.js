@@ -23,7 +23,7 @@ export default function(props) {
 
                 <div>
                   <progress value="0" max="100" id="up">0%</progress>
-                  <input type="file" id="fileButton" onClick={upload} />
+                  <input type="file" id="fileButton" onChange={upload} />
                 </div>
           		</div>
 
