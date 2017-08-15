@@ -54,13 +54,13 @@ export const identificationImgURLregister = (value)=>{
   });
 }
 
-export const upload = (cb)=>{
+export const upload = ()=>{
   var up = document.getElementById('up');
   var fileButton = document.getElementById('fileButton');
 
   fileButton.addEventListener('change', function(e){
     var file = e.target.files[0];
-    var ref = firebase.storage().ref('images' + file.name);
+    var ref = firebase.storage().ref('images/' + file.name);
 
     var task = ref.put(file);
       task.on('state_changed', function progress(snapshot){
