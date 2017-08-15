@@ -1,9 +1,12 @@
 import * as firebase from "firebase";
 import users from './store/user'
 var config = {
-    apiKey: "AIzaSyAqC7F7EsNb5cfdkXBOiZQRwbTxjTSZdL8",
-    authDomain: "n-license.firebaseapp.com",
-    databaseURL: "https://n-license.firebaseio.com/",
+  apiKey: "AIzaSyAqC7F7EsNb5cfdkXBOiZQRwbTxjTSZdL8",
+  authDomain: "n-license.firebaseapp.com",
+  databaseURL: "https://n-license.firebaseio.com",
+  projectId: "n-license",
+  storageBucket: "n-license.appspot.com",
+  messagingSenderId: "328051668232"
 };
 firebase.initializeApp(config);
 var provider = new firebase.auth.FacebookAuthProvider();
