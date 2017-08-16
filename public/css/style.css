@@ -529,8 +529,7 @@ img{
 #mycanvas {
 	border-bottom: 1px solid #CCCCCC;
 	border-radius: 6px;
-	width: 262px;
-	height: 55px;
+	cursor: crosshair;
 }
 
 .nameRegist progress{
