@@ -87,17 +87,12 @@ export const test = ()=>{
   var canvas = document.getElementById('mycanvas');
 
   fileButton.addEventListener('click', function(){
-    // var file = {
-    //   width: 100,
-    //   height: 50,
-    //   src: canvas.toDataURL("image/png")
-    // }
 
-    var message = '4b6p5Y-344GX44G-44GX44Gf77yB44GK44KB44Gn44Go44GG77yB';
+    var message = canvas.toDataURL("image/png");
     var ref = firebase.storage().ref('sign/' + message);
-    ref.putString(message, 'base64url').then(function(snapshot) {
-    console.log('Uploaded a base64url string!');
-  });
+    ref.putString(message).then(function(snapshot) {
+        console.log('Uploaded a raw string!');
+     });
   });
 
 }
