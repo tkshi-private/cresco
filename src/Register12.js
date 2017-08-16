@@ -1,5 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router'
+import users from './store/user'
+import {test} from './firebase';
+import canvas from './canvas';
 
 export default function(props) {
     return (
@@ -19,9 +22,9 @@ export default function(props) {
 
           		<div className="cardCover__RegistBlock">
           			<div className="nameRegist">
-          				<form action="#" method="post">
-          					<input type="text" name="name" placeholder="野村太郎" />
-          				</form>
+          				<canvas id="mycanvas"></canvas>
+                  <button id="button" onClick={test}>登録する</button>
+                  <progress value="0" max="100" id="up">0%</progress>
           			</div>
 
           		</div>

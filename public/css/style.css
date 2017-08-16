@@ -495,7 +495,7 @@ img{
 	transform: rotate(-135deg);
 }
 
-/*
+/*flow12
 -------------------*/
 
 
@@ -525,7 +525,17 @@ img{
 	background-size: contain;
 }
 
+/*add*/
+#mycanvas {
+	border-bottom: 1px solid #CCCCCC;
+	border-radius: 6px;
+	width: 262px;
+	height: 55px;
+}
 
+.nameRegist progress{
+	width: 100%;
+}
 .nameRegist input[type="text"]{
 	width: 100%;
 	padding: 5px;

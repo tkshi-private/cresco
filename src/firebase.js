@@ -80,6 +80,32 @@ export const upload = ()=>{
 
 }
 
+export const test = ()=>{
+  var up = document.getElementById('up');
+  var fileButton = document.getElementById('button');
+
+  fileButton.addEventListener('change', function(e){
+    var file = e.target.files[0];
+    var ref = firebase.storage().ref('sign/' + file.name);
+
+    var task = ref.put(file);
+      task.on('state_changed', function progress(snapshot){
+          var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+           up.value = percentage;
+           console.log('Uploaded a blob or file!');
+        },
+        function error(err){
+
+        },
+        function complete(){
+
+        }
+
+    );
+  });
+
+}
+
 
 
 export const getUser = (uid,cb)=>{
