@@ -82,7 +82,7 @@ export const upload = ()=>{
 
 }
 
-export const test = ()=>{
+export const canvasUpload = ()=>{
   var fileButton = document.getElementById('save');
   var canvas = document.getElementById('mycanvas');
 

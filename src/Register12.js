@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router'
 import users from './store/user'
-import {test} from './firebase';
+import {canvasUpload} from './firebase';
 import canvas from './canvas';
 
 export default function(props) {
@@ -33,9 +33,9 @@ export default function(props) {
                     <option value="3">中</option>
                     <option value="5">太</option>
                 </select>
-                <input type="button" id="erase" value="消去" />
+                  <input type="button" id="erase" value="消去" />
           				<canvas id="mycanvas" width="262px" height="55px">canvas</canvas>
-                  <button id="save" onClick={test}>登録する</button>
+                  <input type="submit" id="save" value="登録する" onClick={canvasUpload}/>
           			</div>
 
           		</div>
