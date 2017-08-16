@@ -85,15 +85,20 @@ export const upload = ()=>{
 export const canvasUpload = ()=>{
   var fileButton = document.getElementById('save');
   var canvas = document.getElementById('mycanvas');
+  var metadata = {
+    contentType: 'image/jpeg',
+  };
 
   fileButton.addEventListener('click', function(){
-
     var message = canvas.toDataURL("image/png");
     var ref = firebase.storage().ref('sign/' + message);
     ref.putString(message).then(function(snapshot) {
         console.log('Uploaded a raw string!');
+        ref.put(metadata);
      });
   });
+
+
 
 }
 
