@@ -22,7 +22,19 @@ export default function(props) {
 
           		<div className="cardCover__RegistBlock">
           			<div className="nameRegist">
-          				<canvas id="mycanvas"></canvas>
+                <select id="penColor">
+                    <option value="black">黒</option>
+                    <option value="red">赤</option>
+                    <option value="blue">青</option>
+                    <option value="white">白</option>
+                </select>
+                <select id="penWidth">
+                    <option value="1">細</option>
+                    <option value="3">中</option>
+                    <option value="5">太</option>
+                </select>
+                <input type="button" id="erase" value="消去" />
+          				<canvas id="mycanvas">canvas</canvas>
                   <button id="button" onClick={test}>登録する</button>
                   <progress value="0" max="100" id="up">0%</progress>
           			</div>

@@ -58,7 +58,7 @@ export const upload = ()=>{
   var up = document.getElementById('up');
   var fileButton = document.getElementById('fileButton');
 
-  fileButton.addEventListener('change', function(e){
+  fileButton.addEventListener('click', function(e){
     var file = e.target.files[0];
     var ref = firebase.storage().ref('images/' + file.name);
 
