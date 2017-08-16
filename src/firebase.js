@@ -1,5 +1,7 @@
 import * as firebase from "firebase";
 import users from './store/user'
+import $ from 'jquery';
+
 var config = {
   apiKey: "AIzaSyAqC7F7EsNb5cfdkXBOiZQRwbTxjTSZdL8",
   authDomain: "n-license.firebaseapp.com",
@@ -81,27 +83,21 @@ export const upload = ()=>{
 }
 
 export const test = ()=>{
-  var up = document.getElementById('up');
-  var fileButton = document.getElementById('button');
+  var fileButton = document.getElementById('save');
+  var canvas = document.getElementById('mycanvas');
 
-  fileButton.addEventListener('change', function(e){
-    var file = e.target.files[0];
-    var ref = firebase.storage().ref('sign/' + file.name);
+  fileButton.addEventListener('click', function(){
+    // var file = {
+    //   width: 100,
+    //   height: 50,
+    //   src: canvas.toDataURL("image/png")
+    // }
 
-    var task = ref.put(file);
-      task.on('state_changed', function progress(snapshot){
-          var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-           up.value = percentage;
-           console.log('Uploaded a blob or file!');
-        },
-        function error(err){
-
-        },
-        function complete(){
-
-        }
-
-    );
+    var message = '4b6p5Y-344GX44G-44GX44Gf77yB44GK44KB44Gn44Go44GG77yB';
+    var ref = firebase.storage().ref('sign/' + message);
+    ref.putString(message, 'base64url').then(function(snapshot) {
+    console.log('Uploaded a base64url string!');
+  });
   });
 
 }

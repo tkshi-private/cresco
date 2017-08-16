@@ -47,4 +47,14 @@ $(function() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
   });
 
+  $('#save').click(function() {
+       var img = $('<img>').attr({
+           width: 100,
+           height: 50,
+           src: canvas.toDataURL()
+       });
+       $('#gallery').append(img.addClass('thumbnail'));
+       ctx.clearRect(0, 0, canvas.width, canvas.height);
+   });
+
 });

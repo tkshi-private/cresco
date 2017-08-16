@@ -35,8 +35,7 @@ export default function(props) {
                 </select>
                 <input type="button" id="erase" value="消去" />
           				<canvas id="mycanvas" width="262px" height="55px">canvas</canvas>
-                  <button id="button" onClick={test}>登録する</button>
-                  <progress value="0" max="100" id="up">0%</progress>
+                  <button id="save" onClick={test}>登録する</button>
           			</div>
 
           		</div>
