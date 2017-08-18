@@ -592,7 +592,9 @@ input[type="text"]::-ms-input-placeholder {
 		/*本当は８０だけどたてなので*/
 }
 
-
+.DounloadImg{
+	height: 65px;
+}
 
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router'
 import users from './store/user'
-import {canvasUpload} from './firebase';
+import {canvasDownload} from './firebase';
 import canvas from './canvas';
 
 export default function(props) {
@@ -22,15 +22,13 @@ export default function(props) {
 
           		<div className="cardCover__RegistBlock">
           			<div className="nameRegist">
-                  <div><input type="button" id="erase" value="消去" /></div>
-          				<canvas id="mycanvas" width="440px" height="65px">canvas</canvas>
-                  <div><input type="submit" id="save" value="登録する" onClick={canvasUpload}/></div>
+          				<div className="DounloadImg"><img id="myimg" src="" /></div>
           			</div>
 
           		</div>
 
           		<div className="btnAction-next">
-          			<Link to={'/register13'}>次へ</Link>
+          			<Link to={'/register14'}>次へ</Link>
           		</div>
 
           	</div>

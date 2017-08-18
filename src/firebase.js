@@ -1,6 +1,5 @@
 import * as firebase from "firebase";
 import users from './store/user'
-import $ from 'jquery';
 
 var config = {
   apiKey: "AIzaSyAqC7F7EsNb5cfdkXBOiZQRwbTxjTSZdL8",
@@ -73,7 +72,11 @@ export const upload = ()=>{
     var file = e.target.files[0];
     var ref = firebase.storage().ref('images/' + file.name);
 
-    var task = ref.put(file);
+    var metadata = {
+      contentType: 'image/png',
+    };
+
+    var task = ref.put(file,metadata);
       task.on('state_changed', function progress(snapshot){
           var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
            up.value = percentage;
@@ -94,9 +97,6 @@ export const upload = ()=>{
 export const canvasUpload = ()=>{
   var fileButton = document.getElementById('save');
   var canvas = document.getElementById('mycanvas');
-  var metadata = {
-    contentType: 'image/jpeg',
-  };
 
   fileButton.addEventListener('click', function(){
     var message = canvas.toDataURL("image/png");
@@ -106,7 +106,28 @@ export const canvasUpload = ()=>{
      });
   });
 
+}
 
+export const canvasDownload = ()=>{
+  var ref = firebase.storage()
+  ref.getDownloadURL().then(function(url) {
+  // `url` is the download URL for 'images/stars.jpg'
+
+  // This can be downloaded directly:
+  var xhr = new XMLHttpRequest();
+  xhr.responseType = 'blob';
+  xhr.onload = function(event) {
+    var blob = xhr.response;
+  };
+  xhr.open('GET', url);
+  xhr.send();
+
+  // Or inserted into an <img> element:
+  var img = document.getElementById('myimg');
+  img.src = url;
+}).catch(function(error) {
+  // Handle any errors
+});
 
 }
 
