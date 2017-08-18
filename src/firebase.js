@@ -94,7 +94,6 @@ export const canvasUpload = ()=>{
     var ref = firebase.storage().ref('sign/' + message);
     ref.putString(message).then(function(snapshot) {
         console.log('Uploaded a raw string!');
-        ref.put(metadata);
      });
   });
 
