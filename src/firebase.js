@@ -94,40 +94,24 @@ export const upload = ()=>{
 
 }
 
-export const canvasUpload = ()=>{
-  var fileButton = document.getElementById('save');
+export const canvasUpload = (cb)=>{
   var canvas = document.getElementById('mycanvas');
 
-  fileButton.addEventListener('click', function(){
-    var message = canvas.toDataURL("image/png");
-    var ref = firebase.storage().ref('sign/' + message);
-    ref.putString(message).then(function(snapshot) {
-        console.log('Uploaded a raw string!');
-     });
-  });
-
-}
-
-export const canvasDownload = ()=>{
-  var ref = firebase.storage()
-  ref.getDownloadURL().then(function(url) {
-  // `url` is the download URL for 'images/stars.jpg'
-
-  // This can be downloaded directly:
-  var xhr = new XMLHttpRequest();
-  xhr.responseType = 'blob';
-  xhr.onload = function(event) {
-    var blob = xhr.response;
+  var metadata = {
+    contentType: 'image/png',
   };
-  xhr.open('GET', url);
-  xhr.send();
 
-  // Or inserted into an <img> element:
-  var img = document.getElementById('myimg');
-  img.src = url;
-}).catch(function(error) {
-  // Handle any errors
-});
+    var message = canvas.toDataURL("image/png");
+    console.log(message.slice(0,30));
+
+    var test = message.replace( "data:image/png;base64,", "" ) ;
+    var ref = firebase.storage().ref('sign/' + (new Date()).getTime() + ".png");
+    console.log(test.slice(0,30));
+
+    ref.putString(test,'base64' ,metadata).then(function(snapshot) {
+        console.log('Uploaded a raw string!');
+        cb(snapshot.downloadURL);
+     });
 
 }
 

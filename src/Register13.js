@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router'
 import users from './store/user'
-import {canvasDownload} from './firebase';
 import canvas from './canvas';
 
 export default function(props) {

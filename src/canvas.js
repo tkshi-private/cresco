@@ -41,8 +41,4 @@ $(function() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
   });
 
-  $('#save').click(function() {
-       ctx.clearRect(0, 0, canvas.width, canvas.height);
-   });
-
 });
