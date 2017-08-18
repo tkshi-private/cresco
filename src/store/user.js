@@ -8,6 +8,7 @@ class User{
   @observable displayName = ''
   @observable uid = ''
   @observable identificationImgURL = ''
+  @observable signImgURL = ''
 }
 
 class Users{
