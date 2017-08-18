@@ -56,6 +56,15 @@ export const identificationImgURLregister = (value)=>{
   });
 }
 
+export const test = (cb) =>{
+    var telLead = document.getElementById('telBtn')
+    var telBtn = document.getElementById('tel-Upload')
+
+    telLead.addEventListener('click', function(){
+        telBtn.style.display = 'block';
+    });
+}
+
 export const upload = ()=>{
   var up = document.getElementById('up');
   var fileButton = document.getElementById('fileButton');

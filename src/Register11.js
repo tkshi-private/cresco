@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router'
 import users from './store/user'
 import {upload} from './firebase';
+import {test} from './firebase';
 
 export default function(props) {
     return (
@@ -18,14 +19,14 @@ export default function(props) {
           			<p><img src="img/common/icon_camela.png" alt=""/></p>
           		</div>
 
-          		<div className="tel_lead">
+          		<div id="telBtn" onClick={test} className="tel_lead" >
           			<p>身分証を登録しよう！</p>
-
-                <div>
-                  <progress value="0" max="100" id="up">0%</progress>
-                  <input type="file" id="fileButton" onChange={upload} />
-                </div>
           		</div>
+
+              <div id="tel-Upload">
+                <progress value="0" max="100" id="up">0%</progress>
+                <input type="file" id="fileButton" onChange={upload} />
+              </div>
 
           		<div className="btnAction-Click active">
           			<ul className="filmLink">

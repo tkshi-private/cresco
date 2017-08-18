@@ -405,8 +405,12 @@ img{
 	font-size: 22px;
 	color: #19BC9C;
 	margin-bottom: 20px;
+	cursor: pointer;
 }
 
+.tel_lead:hover{
+	opacity: .7;
+}
 
 
 /*flow_09
@@ -453,6 +457,11 @@ img{
 	right:0;
 	width: 90%;
 	margin: auto;
+}
+
+#tel-Upload{
+	display: none;
+	text-align: center;
 }
 
 .filmLink{
