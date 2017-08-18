@@ -9,7 +9,7 @@ $(function() {
       startY,
       x,
       y,
-      borderWidth = 10,
+      borderWidth = 20,
       isDrawing = false;
 
   $('#mycanvas').mousedown(function(e) {
@@ -35,12 +35,6 @@ $(function() {
       isDrawing = false;
   });
 
-  $('#penColor').change(function() {
-      ctx.strokeStyle = $(this).val();
-  });
-  $('#penWidth').change(function() {
-      ctx.lineWidth = $(this).val();
-  });
   $('#erase').click(function() {
     alert("本当に消去しますか？");
       // if (!confirm('本当に消去しますか？'));
@@ -48,12 +42,6 @@ $(function() {
   });
 
   $('#save').click(function() {
-       var img = $('<img>').attr({
-           width: 100,
-           height: 50,
-           src: canvas.toDataURL()
-       });
-       $('#gallery').append(img.addClass('thumbnail'));
        ctx.clearRect(0, 0, canvas.width, canvas.height);
    });
 

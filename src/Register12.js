@@ -14,7 +14,7 @@ export default function(props) {
           	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
           <div id="wrapper">
 
-          	<div className="cardCover white-cover">
+          	<div className="cardCover-SideLayout white-cover">
 
           		<div className="cardCover__flow12-leadBlock">
           			<p className="lead-title">サインを記入しよう</p>
@@ -22,20 +22,9 @@ export default function(props) {
 
           		<div className="cardCover__RegistBlock">
           			<div className="nameRegist">
-                <select id="penColor">
-                    <option value="black">黒</option>
-                    <option value="red">赤</option>
-                    <option value="blue">青</option>
-                    <option value="white">白</option>
-                </select>
-                <select id="penWidth">
-                    <option value="1">細</option>
-                    <option value="3">中</option>
-                    <option value="5">太</option>
-                </select>
-                  <input type="button" id="erase" value="消去" />
-          				<canvas id="mycanvas" width="262px" height="55px">canvas</canvas>
-                  <input type="submit" id="save" value="登録する" onClick={canvasUpload}/>
+                  <div><input type="button" id="erase" value="消去" /></div>
+          				<canvas id="mycanvas" width="440px" height="65px">canvas</canvas>
+                  <div><input type="submit" id="save" value="登録する" onClick={canvasUpload}/></div>
           			</div>
 
           		</div>

@@ -43,6 +43,14 @@ img{
 	position: relative;
 }
 
+.cardCover-SideLayout{
+	max-width: 550px;
+	width: 90%;
+	height: 290px;
+	margin: 20px auto;
+	position: relative;
+}
+
 .cardCover.green-cover{
 	background: url(/img/common/Rectangle.png) no-repeat center center;
 	-webkit-background-size: contain;
@@ -53,6 +61,12 @@ img{
 	background: url(/img/common/RectangleW.png) no-repeat center center;
 	-webkit-background-size: contain;
 	background-size: contain;
+}
+
+.cardCover-SideLayout.white-cover{
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 3px 3px 5px #777;
 }
 
 /*flow_01
@@ -500,8 +514,8 @@ img{
 
 
 .cardCover__flow12-leadBlock{
-	padding-top: 145px;
-	margin-bottom: 40px;
+	padding-top: 45px;
+	/*margin-bottom: 40px;*/
 }
 
 .cardCover__flow12-leadBlock .lead-title{
@@ -517,7 +531,8 @@ img{
 .cardCover__flow12-leadBlock .lead-title:before{
 	content:'';
 	position: absolute;
-	left:5px;
+	left:50%;
+	margin-left: -130px;
 	width: 28px;
 	height: 28px;
 	background: url(/img/common/icon_pen.png) no-repeat center center;
