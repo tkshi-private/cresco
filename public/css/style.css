@@ -314,8 +314,10 @@ img{
     bottom: 25px;
     left: 0;
     right: 0;
-    opacity: 0.5;
 		cursor: pointer;
+}
+.btnClick:hover{
+	opacity: .7;
 }
 
 .btnClick:before{
