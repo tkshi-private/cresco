@@ -11,6 +11,8 @@ var config = {
 };
 firebase.initializeApp(config);
 var provider = new firebase.auth.FacebookAuthProvider();
+var provider = new firebase.auth.GoogleAuthProvider();
+
 var database = firebase.database();
 
 

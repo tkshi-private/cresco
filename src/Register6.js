@@ -62,7 +62,7 @@ export default class App extends Component {
                                           <span className="icon_check active">
                                               <i className="fa fa-check-circle" aria-hidden="true"></i>
                                           </span>
-                                          <p className="Regist_text">Googleで登録</p>
+                                          <p className="Regist_text active">Googleで登録</p>
                                       </a>
                                   </ToggleDisplay>
                                 </div>
