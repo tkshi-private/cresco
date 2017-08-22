@@ -46,16 +46,25 @@ export default class App extends Component {
                                             <p className="Regist_text active">Facebookで登録</p>
                                         </a>
                                     </ToggleDisplay>
-
                                 </div>
 
                                 <div className="btnRegist">
-                                    <a href="#">
-                                        <span className="icon_check">
-                                            <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                        </span>
-                                        <p className="Regist_text">Googleで登録</p>
-                                    </a>
+                                  <ToggleDisplay show={!users.getMyUser().email}>
+                                      <a href="#" onClick={login}>
+                                          <span className="icon_check">
+                                              <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                          </span>
+                                          <p className="Regist_text">Googleで登録</p>
+                                      </a>
+                                  </ToggleDisplay>
+                                  <ToggleDisplay show={users.getMyUser().email}>
+                                      <a href="#">
+                                          <span className="icon_check active">
+                                              <i className="fa fa-check-circle" aria-hidden="true"></i>
+                                          </span>
+                                          <p className="Regist_text">Googleで登録</p>
+                                      </a>
+                                  </ToggleDisplay>
                                 </div>
                             </div>
 
