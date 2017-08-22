@@ -11,7 +11,7 @@ var config = {
 };
 firebase.initializeApp(config);
 var provider = new firebase.auth.FacebookAuthProvider();
-var provider = new firebase.auth.GoogleAuthProvider();
+// var provider = new firebase.auth.GoogleAuthProvider();
 
 var database = firebase.database();
 
@@ -110,34 +110,29 @@ export const canvasUpload = (cb)=>{
 
     var test = message.replace( "data:image/png;base64,", "" ) ;
     var ref = firebase.storage().ref('sign/' + (new Date()).getTime() + ".png");
-    console.log(test.slice(0,30));
-
-
-
-    ref.getDownloadURL().then(function(test) {
-      // `url` is the download URL for 'images/stars.jpg'
-
-      // This can be downloaded directly:
-      var xhr = new XMLHttpRequest();
-      xhr.responseType = 'blob';
-      xhr.onload = function(event) {
-        var blob = xhr.response;
-      };
-      xhr.open('GET', test);
-      xhr.send();
-      // Or inserted into an <img> element:
-      var img = document.getElementById('myimg');
-      img.src = test;
-    }).catch(function(error) {
-      // Handle any errors
-    });
+    // console.log(test.slice(0,30));
 
     ref.putString(test,'base64' ,metadata).then(function(snapshot) {
         console.log('Uploaded a raw string!');
-        // TODO: save snapshot.downloadURL to mobx store
-        cb();
-     });
 
+        ref.getDownloadURL().then(function(test) {
+          // This can be downloaded directly:
+          var xhr = new XMLHttpRequest();
+          xhr.responseType = 'blob';
+          xhr.onload = function(event) {
+            var blob = xhr.response;
+          };
+            xhr.open('GET', test);
+            xhr.send();
+            // Or inserted into an <img> element:
+            var img = document.getElementById('myimg');
+            img.src = test;
+          }).catch(function(error) {
+          // Handle any errors
+        });
+
+      cb();
+     });
 }
 
 

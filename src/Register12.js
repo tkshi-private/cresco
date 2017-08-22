@@ -23,7 +23,7 @@ export default function(props) {
           		<div className="cardCover__RegistBlock">
           			<div className="nameRegist">
                   <div><input type="button" id="erase" value="消去" /></div>
-          				<canvas id="mycanvas" width="440px" height="65px">canvas</canvas>
+          				<canvas id="mycanvas" width="440px" height="85px">canvas</canvas>
           			</div>
 
           		</div>
