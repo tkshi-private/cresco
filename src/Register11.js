@@ -31,7 +31,7 @@ export default function(props) {
           		<div className="btnAction-Click active">
           			<ul className="filmLink">
           				<li><Link to="/register12">あとで</Link></li>
-          				<li><a href="">撮影</a></li>
+          				<li><Link to="/register12">撮影</Link></li>
           			</ul>
           		</div>
 
