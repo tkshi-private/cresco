@@ -20,7 +20,7 @@ export default function(props) {
           		</div>
 
           		<div id="telBtn" onClick={test} className="tel_lead" >
-          			<p>身分証を登録しよう！</p>
+          			<p>アップロードしよう！</p>
           		</div>
 
               <div id="tel-Upload">
