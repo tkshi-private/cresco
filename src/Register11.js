@@ -3,7 +3,44 @@ import {Link} from 'react-router'
 import users from './store/user'
 import {upload} from './firebase';
 import {test} from './firebase';
-import ReactSwipe from 'react-swipe';
+import SwipeableViews from 'react-swipeable-views';
+
+
+const styles = {
+  slide: {
+    padding: 15,
+    minHeight: 100,
+    color: '#fff',
+  },
+  slide1: {
+    background: '#FEA900',
+  },
+  slide2: {
+    background: '#B3DC4A',
+  },
+  slide3: {
+    background: '#6AC0FF',
+  },
+};
+
+
+
+const MyComponent = () => (
+  <SwipeableViews>
+    <div style={Object.assign({}, styles.slide, styles.slide1)}>
+      slide n°1
+    </div>
+    <div style={Object.assign({}, styles.slide, styles.slide2)}>
+      slide n°2
+    </div>
+    <div style={Object.assign({}, styles.slide, styles.slide3)}>
+      slide n°3
+    </div>
+  </SwipeableViews>
+);
+
+
+console.log(MyComponent);
 
 export default function(props) {
     return (
@@ -35,12 +72,6 @@ export default function(props) {
           				<li><Link to="/register12">撮影</Link></li>
           			</ul>
           		</div>
-
-              <ReactSwipe className="carousel" swipeOptions={{continuous: false}}>
-                              <div className="test">PANE 1</div>
-                              <div className="test">PANE 2</div>
-                              <div className="test">PANE 3</div>
-              </ReactSwipe>
           	</div>
 
           	<div className="pager">
