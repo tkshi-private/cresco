@@ -3,7 +3,6 @@ import {Link} from 'react-router'
 import users from './store/user'
 import {upload} from './firebase';
 import {test} from './firebase';
-import ReactSwipe from 'react-swipe';
 
 export default function(props) {
     return (
@@ -35,12 +34,6 @@ export default function(props) {
           				<li><Link to="/register12">撮影</Link></li>
           			</ul>
           		</div>
-
-              <ReactSwipe className="carousel" swipeOptions={{continuous: false}}>
-                              <div className="test">PANE 1</div>
-                              <div className="test">PANE 2</div>
-                              <div className="test">PANE 3</div>
-              </ReactSwipe>
           	</div>
 
           	<div className="pager">
